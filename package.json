@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "update-secrets": "supabase secrets set --env-file ./supabase/.env",
-    "local-dev": "supabase start && supabase functions serve --env-file ./supabase/.env",
+    "update-prod-secrets": "supabase secrets set --env-file .env",
+    "local-dev": "supabase start && supabase functions serve --env-file .env",
     "test": "curl -i --location --request POST 'http://127.0.0.1:54321/functions/v1/keep-supabase-alive'"
   },
   "keywords": [],
