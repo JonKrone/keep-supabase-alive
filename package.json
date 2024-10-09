@@ -1,0 +1,21 @@
+{
+  "name": "keep-supabase-alive",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "update-secrets": "supabase secrets set --env-file ./supabase/.env",
+    "local-dev": "supabase start && supabase functions serve --env-file ./supabase/.env",
+    "test": "curl -i --location --request POST 'http://127.0.0.1:54321/functions/v1/keep-supabase-alive'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "node-fetch": "^3.3.2",
+    "prettier": "^3.3.3",
+    "supabase": "^1.203.0",
+    "typescript": "^5.6.3"
+  }
+}
